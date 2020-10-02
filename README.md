@@ -66,4 +66,21 @@
     ```
      **In short in case of || operator the LHS is returned if it converts to truthy value otherwise RHS value is returned. And in case of && operator the LHS is returned if it evaluates to falsy value otherwise the RHS value is returned.**
 
+### Miscellaneous JS things
+Did you ever try sorting a numerical array in javascript?
+Try in console:
+```javascript
+let arrayToSort = [123, 8, 2];
+arrayToSort.sort()
+console.log(arrayToSort)
+```
 
+You will be surprised to see the output to be [123, 2, 8], because by default JS converts every element to string and sort them. Well, that's Javascript!
+To fix this, or rather I would say to tweak it, we can do something like this.
+
+```javascript
+arrayToSort.sort((a, b)=>a-b);
+console.log(arrayToSort)
+```
+
+The sort function takes a comparator function as argument which you can use to emulate different types of sortings.
