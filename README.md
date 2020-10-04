@@ -25,6 +25,12 @@
     ```javascript
     console.log(typeof (typeof 'str')); // 'string'
     ```
+- if you code:
+    ```javascript
+    console.log(typeof(Object))
+    ```
+   It returns "function" as result. This is because Javascript is a weakly typed language and with a great degree of freedom. JavaScript functions are called "high-order" or "first-class" and can, like objects, store attributes and methods.
+
 - There is only one value in JavaScript that is not equal to itself - **NaN**. `NaN` is the result of a nonsensical computations and as such is not equal to another nonsensical computations.
 
 - `null` and `undefined` are the equal in value but they have different types. They both represent the absence of any value.
@@ -84,3 +90,15 @@ console.log(arrayToSort)
 ```
 
 The sort function takes a comparator function as argument which you can use to emulate different types of sortings.
+
+Did you know that, in addition to being able to store functions in variables, you can declare them in an abbreviated form, similar to ternary operators? This type of declaration is called "Arrow Function". Here is an example:
+The code:
+```javascript
+function sum(n1,n2) {
+	return n1 + n2;
+}
+```
+Is equal to this one, with arrow function:
+```
+const sum = (n1,n2) => n1+n2;
+```
